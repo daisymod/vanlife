@@ -1,6 +1,8 @@
 
 export default function Income(){
     return (
-        <>in</>
+        <>
+            <h1>Income goes here</h1>
+        </>
     )
 }

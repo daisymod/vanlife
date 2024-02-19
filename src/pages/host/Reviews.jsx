@@ -1,6 +1,8 @@
 
 export default function Review(){
     return (
-        <>rev</>
+        <>
+            <h1>Review goes here</h1>
+        </>
     )
 }
