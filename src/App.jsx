@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -7,6 +7,11 @@ import Van from './pages/vans/Van'
 import Dashboard from './pages/host/Dashboard'
 import Income from './pages/host/Income'
 import Review from './pages/host/Reviews'
+import HostVans from './pages/host/Vans'
+import HostVan from './pages/host/Van'
+import HostVanInfo from './pages/host/VanInfo'
+import HostVanPricing from './pages/host/VanPricing'
+import HostVanPhotos from './pages/host/VanPhotos'
 
 import './server'
 import './App.css'
@@ -22,6 +27,18 @@ function App() {
           <Route  path='host' element={<HostLayout />}>
             <Route index element={<Dashboard />}></Route>
             <Route path='income' element={<Income />}></Route>
+            <Route path='vans' element={<HostVans />}></Route>
+            <Route path='vans/:id' element={<HostVan />}>
+              <Route index element={<HostVanInfo />}></Route>
+              <Route path='pricing' element={<HostVanPricing />}></Route>
+              <Route path='photos' element={<HostVanPhotos />}></Route>
+            </Route>
+
+            {/* <Route path="vans" element={<Outlet />}>
+              <Route index element={<HostVans />} />
+              <Route path=":id" element={<HostVan />} />
+            </Route> */}
+
             <Route path='reviews' element={<Review />}></Route>
           </Route>
           

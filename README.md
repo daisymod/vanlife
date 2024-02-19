@@ -14,3 +14,4 @@ part 2: Nested routes
 
 - layout route (rendering layout then matching content based on route path)
 - relative paths
+- active links via NavLink
