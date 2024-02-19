@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from 'react-router-dom'
-export default function Van(){
+export default function Vans(){
     const [vans, setVans] = useState([])
     useEffect(function(){
         fetch('/api/vans')
