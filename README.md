@@ -1,5 +1,7 @@
 # vanlife
 
+deployed: https://vanlife-daisy.netlify.app
+
 React + Vite
 
 part 1: Building single-page app with react router 6
@@ -16,4 +18,8 @@ part 2: Nested routes
 - relative paths
 - active links via NavLink
 
-deployed: https://vanlife-daisy.netlify.app
+part 3: search params and filter by type
+
+- useSearchParams() hook
+- Link state, useLocation() hook
+- data layer API

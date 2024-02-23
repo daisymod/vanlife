@@ -12,7 +12,7 @@ import HostVan from './pages/host/Van'
 import HostVanInfo from './pages/host/VanInfo'
 import HostVanPricing from './pages/host/VanPricing'
 import HostVanPhotos from './pages/host/VanPhotos'
-
+import NotFound from './pages/NotFound'
 import './server'
 import './App.css'
 import HostLayout from './components/HostLayout'
@@ -53,7 +53,7 @@ function App() {
             <Route index element={<Vans />} />
             <Route path=":id" element={<VanDetail />} />
           </Route> */}
-
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
